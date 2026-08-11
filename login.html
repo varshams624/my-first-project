@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<title>my login</title>
+<style>
+body{
+   background-color:#f0f2f5;
+   font-family:Arial;
+   text-align: center;
+}
+
+h2{
+   color:#1877f2;
+   font-size:35px;
+}
+
+.login{  
+    background:#1877f2;
+    color:white;
+    border:none;
+    font-size:18px;
+}
+
+</style>
+<script>   
+
+function check()
+{
+
+const uservalue="varsha";
+const userpass="varshams";
+
+var umn=document.getElementById("user").value;
+
+localStorage.setItem("umn", umn);
+
+if(umn!==uservalue)
+{
+alert("username is incorrect");
+return false;
+
+}
+
+var pass=document.getElementById("pass").value;
+
+localStorage.setItem("pass",pass);
+
+if(userpass!==pass)
+{
+alert("password is incorrect");
+return false;
+}
+
+
+  
+}
+</script>
+<body>
+<form action="face.html" name="login">
+<center>
+<h2>FACEBOOK</h2>
+
+<table border="1">
+
+<tr>
+<td>Username</td>
+<td><input type="text" name="user" id="user"></td>
+</tr>
+
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="pass" id="pass"></td><br></br>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input class="login" type="submit" value="Log In" onclick="return check()"><br>
+
+</form>
+</body>
+</center>
+</head>
+</html>
